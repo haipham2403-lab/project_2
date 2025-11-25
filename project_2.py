@@ -86,7 +86,7 @@ elif menu_option == "Gợi ý xe máy cũ":
     with open("xe_gen_sim.pkl", "rb") as f:
         gen_sim = pickle.load(f)
 
-    df_bikes = pd.read_excel('motorbike_cleaned.xlsx', engine='openpyxl')
+    df_bikes = pd.read_excel('motorbike_cleaned.xlsx')
 
     # ------------------------------
     # Tiền xử lý
@@ -322,5 +322,6 @@ elif menu_option == "Phân loại xe":
         }
 
         st.info(f"**Mô tả cụm:** {describe.get(cluster, 'Không có mô tả')}")
+
 
 
